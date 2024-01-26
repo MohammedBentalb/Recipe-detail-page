@@ -1,33 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Young+Serif&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --brandyRed: 14 45% 36%;
+  --darkCharcoal: 24 5% 18%;
+  --darkRaspberry: 332 51% 32%;
+  --eggshell: 30 54% 90%;
+  --youngSerif: 'Young Serif', serif;
+  --outfit: 'Outfit', sans-serif;
+  --snow: 330 100% 98%;
+  --wengeBrown: 30 10% 34%;
+  --whiteCoffee: 30 18% 87%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+  background-color: hsl(var(--eggshell));
+  font-family: var(--outfit);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .categoryTitle {
+    @apply text-[1.75rem] font-youngSerif text-brandyRed;
   }
+
+
 }
+
